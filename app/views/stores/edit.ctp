@@ -22,20 +22,20 @@
 	</fieldset>
 <?php 
 	if($this->Session->read('Auth.User.group_id') != '2'): 
-		echo $this->Form->end(__('Submit', true)); 
+		echo $this->Form->end(__('Submit')); 
 	else:
-		echo $this->Form->end(__('Update', true));
+		echo $this->Form->end(__('Update'));
 	endif;	
 ?>
 </div>
 <?php if($this->Session->read('Auth.User.group_id') != '2'): ?>
 <div class="actions">
-	<h3><?php __('Actions'); ?></h3>
+	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $this->Form->value('Store.id')), null, sprintf(__('Are you sure you want to delete # %s?', true), $this->Form->value('Store.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Stores', true), array('action' => 'index'));?></li>
-		<li><?php echo $this->Html->link(__('New Store', true), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Delete'), array('action' => 'delete', $this->Form->value('Store.id')), null, sprintf(__('Are you sure you want to delete # %s?'), $this->Form->value('Store.id'))); ?></li>
+		<li><?php echo $this->Html->link(__('List Stores'), array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link(__('New Store'), array('action' => 'add')); ?></li>
 	</ul>
 </div>
 <?php 

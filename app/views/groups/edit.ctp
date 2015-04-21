@@ -1,20 +1,20 @@
 <div class="groups form">
 <?php echo $this->Form->create('Group');?>
 	<fieldset>
-		<legend><?php __('Edit Group'); ?></legend>
+		<legend><?php echo __('Edit Group'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('name');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+<?php echo $this->Form->end(__('Submit'));?>
 </div>
 <div class="actions">
-	<h3><?php __('Actions'); ?></h3>
+	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $this->Form->value('Group.id')), null, sprintf(__('Are you sure you want to delete # %s?', true), $this->Form->value('Group.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('New Group', true), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Group', true), array('action' => 'view')); ?> </li>
+		<li><?php echo $this->Html->link(__('Delete'), array('action' => 'delete', $this->Form->value('Group.id')), null, sprintf(__('Are you sure you want to delete # %s?'), $this->Form->value('Group.id'))); ?></li>
+		<li><?php echo $this->Html->link(__('New Group'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Group'), array('action' => 'view')); ?> </li>
 	</ul>
 </div>

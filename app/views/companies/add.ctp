@@ -1,7 +1,7 @@
 <div class="companies form">
 <?php echo $this->Form->create('Company');?>
 	<fieldset>
-		<legend><?php __('Add Company'); ?></legend>
+		<legend><?php echo __('Add Company'); ?></legend>
 	<?php
 		if($this->Session->read('Auth.User.group_id') != '2'): 
 		echo $this->Form->input('store_id');
@@ -16,14 +16,14 @@
 		echo $this->Form->input('country');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+<?php echo $this->Form->end(__('Submit'));?>
 </div>
 <div class="actions">
-	<h3><?php __('Actions'); ?></h3>
+	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Companies', true), array('action' => 'index'));?></li>
-		<li><?php echo $this->Html->link(__('New Company', true), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Companies'), array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link(__('New Company'), array('action' => 'add')); ?></li>
         
 	</ul>
 </div>
